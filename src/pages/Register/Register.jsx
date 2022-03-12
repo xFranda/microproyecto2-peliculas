@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import './Register.module.css'
 
-import { db, auth, googleProvider } from "../utils/firebase-config";
+import { db, auth, googleProvider } from "../../utils/firebase-config";
 
 export default function RegisterPage() {
   const navigate = useNavigate();
@@ -23,10 +24,10 @@ export default function RegisterPage() {
 
     <div className="reg">
       <form className= 'form' id="addNewTransactionForm" onSubmit={handleSubmit(onSubmit)}>
-        <h2>Bienvenido a tus peliculas de MicroProyecto 2</h2>
-        <h3>¡Ingrese los datos y regístrese!</h3>
+        <h2 className="headerReg">Bienvenido a tus peliculas de MicroProyecto 2</h2>
+        <h3 className="headerReg">¡Ingrese los datos y regístrese!</h3>
 
-        <h1 className='headerReg'>Ingrese su nombre </h1>
+        <h1 className="headerReg">Ingrese su nombre </h1>
 
                     <div className="form-group">
                         <label htmlFor="username">Nombre</label>

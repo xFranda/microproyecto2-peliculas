@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import HomePage from "./pages/HomePage"
-import Loginpage from "./pages/Loginpage"
-import Register from "./pages/Register"
+import HomePage from "./pages/Home/HomePage"
+import Loginpage from "./pages/Loginpage/Loginpage"
+import Register from "./pages/Register/Register"
 import Error404 from "./pages/Error404"
 import Navbar from './components/NavBar/Navbar';
-import MoviesList from './pages/MoviesList';
+import MoviesList from './pages/MovieList/MoviesList';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
