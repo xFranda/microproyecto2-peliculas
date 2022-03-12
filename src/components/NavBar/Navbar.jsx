@@ -14,6 +14,13 @@ function Navbar() {
 
         
         <li className={styles.rightSide}>
+
+            <div className={styles.container}>
+            <Link to="/" className={styles.link}>
+                Lista de Películas
+            </Link>
+            </div>
+
             <div className={styles.container}>
             <Link to="/login" className={styles.link}>
                 Login
