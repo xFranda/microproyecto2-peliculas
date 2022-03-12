@@ -1,9 +1,13 @@
 import {Link} from "react-router-dom"
 import styles from "./Navbar.module.css"
+import {auth} from  "../../utils/firebase-config"
 
 function Navbar() {
 
+const handleLogout = async() => {
+    await auth.signOut();
 
+}
     return (
     <ul className={styles.navbarContainer}>
         <li>
@@ -16,7 +20,7 @@ function Navbar() {
         <li className={styles.rightSide}>
 
             <div className={styles.container}>
-            <Link to="/" className={styles.link}>
+            <Link to="/lista-de-peliculas" className={styles.link}>
                 Lista de Películas
             </Link>
             </div>
@@ -38,7 +42,7 @@ function Navbar() {
             <div className={styles.container}>{}</div>
 
             <div className={styles.container}>
-            <button type="button">
+            <button type="button" onClick={handleLogout}>
                 Logout
             </button>
             </div>

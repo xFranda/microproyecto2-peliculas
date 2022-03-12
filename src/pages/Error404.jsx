@@ -1,8 +1,8 @@
 
 function error404(){
-
-    <h1>Tas pelao</h1>
-
+    return(
+    <h1>Tas pelao, error 404 not found</h1>
+    )
 }
 
 export default error404;
