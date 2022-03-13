@@ -9,6 +9,7 @@ function MovieCard({movie}){
              <Link to={"/movies/"+ movie.id}>
             <img width = {230} height = {345} className ={styles.movieImg} src= {imgUrl} alt = {movie.title}/>
              <div>{movie.title}</div>
+             
              </Link>
              </li>
 
