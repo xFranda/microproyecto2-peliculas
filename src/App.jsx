@@ -6,6 +6,7 @@ import Register from "./pages/Register/Register"
 import Error404 from "./pages/Error404"
 import Navbar from './components/NavBar/Navbar';
 import MoviesList from './pages/MovieList/MoviesList';
+import MovieDetails from './pages/MovieDetails/MovieDetails';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/register" element={<Register/>} />
       <Route exact path="/login" element={<Loginpage/>} />
       <Route exact path="/lista-de-peliculas" element={<MoviesList/>}/>
+      <Route exact path="/movies/:movieId" element={<MovieDetails/>}/>
       <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>
