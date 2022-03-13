@@ -16,13 +16,12 @@ function App() {
     
     <Navbar />
     <div className="App">
-    <h1>Peliculitas</h1>
     </div>
     
       <Routes>
       <Route exact path="/" element ={<HomePage/>}/>
       <Route exact path="/register" element={<Register/>} />
-      <Route exact path="/login" element={"..."} />
+      <Route exact path="/login" element={<Loginpage/>} />
       <Route exact path="/lista-de-peliculas" element={<MoviesList/>}/>
       <Route path="*" element={<Error404 />} />
       </Routes>

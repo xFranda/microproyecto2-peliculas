@@ -3,6 +3,8 @@ import MoviesList from "../MovieList/MoviesList"
 import axios from "axios"
 import {useEffect, useState} from "react"
 import {db} from "../../utils/firebase-config"
+import MovieFront from "../../components/MovieFront/MovieFront"
+
 
 export default function Homepage(){
 const [movies, setMovies] = useState([]);
@@ -45,6 +47,9 @@ useEffect(() =>{
     return(
         <div>
             <h1 className="titulo">Bienvenido</h1>
+            
+
+            
         
                 
         
