@@ -1,0 +1,31 @@
+[debug] [2022-03-13T20:21:34.466Z] ----------------------------------------------------------------------
+[debug] [2022-03-13T20:21:34.468Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\frand\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-03-13T20:21:34.468Z] CLI Version:   10.2.2
+[debug] [2022-03-13T20:21:34.468Z] Platform:      win32
+[debug] [2022-03-13T20:21:34.469Z] Node Version:  v16.14.0
+[debug] [2022-03-13T20:21:34.469Z] Time:          Sun Mar 13 2022 16:21:34 GMT-0400 (hora de Venezuela)
+[debug] [2022-03-13T20:21:34.470Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-13T20:21:34.576Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-13T20:21:34.576Z] > authorizing via signed-in user (f.briceno@correo.unimet.edu.ve)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\frand\OneDrive\Documentos\GitHub\microproyecto2-peliculas
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-03-13T20:22:31.089Z] Error: kill ENOSYS
+    at process.kill (node:internal/process/per_thread:220:13)
+    at process.listener (C:\Users\frand\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
+    at process.emit (node:events:520:28)
+[error] 
+[error] Error: An unexpected error has occurred.
