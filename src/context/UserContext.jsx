@@ -21,7 +21,7 @@ export default function UserContextProvider({ children }) {
     };
   };
 
-  const createUser = async (userId, data) => {
+const createUser = async (userId, data) => {
     return db
       .collection("users")
       .doc(userId)

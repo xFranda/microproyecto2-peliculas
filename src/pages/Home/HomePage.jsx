@@ -1,6 +1,4 @@
-import MovieCard from "../../components/MovieCard/MovieCard"
-import MoviesList from "../MovieList/MoviesList"
-import axios from "axios"
+
 import {useEffect, useState} from "react"
 import {db} from "../../utils/firebase-config"
 import MovieFront from "../../components/MovieFront/MovieFront"
@@ -46,7 +44,7 @@ useEffect(() =>{
 
     return(
         <div>
-            <h1 className="titulo">Bienvenido</h1>
+            
             <MovieFront/>
             
 

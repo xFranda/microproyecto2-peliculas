@@ -47,7 +47,7 @@ if (isLoading) {
 
 return(
         <div>  
-
+            <h1 className="titulo" style={{textAlign:"center"}} >Bienvenido</h1>
             <ul className={styles.moviesList}>
                {movies.map((movie)=>
                 <MovieCard key={movie.id} movie={movie}/>
@@ -55,12 +55,12 @@ return(
                     
                     
             </ul>
-            <h1>¡Siguientes estrenos!</h1>
+            <h1 style={{textAlign:"center"}}>¡Siguientes estrenos!</h1>
 
             <ul className={styles.moviesList}>
-               {upcoming.map((movie)=>
+            {upcoming.map((movie)=>
                 <MovieCard key={movie.id} movie={movie}/>
-               )}
+            )}
                     
                     
             </ul>
