@@ -7,13 +7,14 @@ import Error404 from "./pages/Error404"
 import Navbar from './components/NavBar/Navbar';
 import MoviesList from './pages/MovieList/MoviesList';
 import MovieDetails from './pages/MovieDetails/MovieDetails';
+import history from './components/Search/history';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
 
 
-    <Router>
+    <Router history={history}>
     
     <Navbar />
     <div className="App">
