@@ -2,38 +2,66 @@ import axios from "axios"
 import {useEffect, useState} from "react"
 import MovieCard from "../../components/MovieCard/MovieCard";
 import styles from "../../pages/MovieList/MoviesList.module.css";
+import { useQuery } from "../../hooks/useQuery";
+import { get } from "../../utils/httpClient";
+import { Spinner } from "../Spinner/Spinner";
 
 
 export default function MovieFront() {
     const [movies, setMovies] = useState([]);
+    const [upcoming,setUpcoming] = useState([]);
+
+    const [isLoading, setIsLoading] = useState(true);
+ 
+
+    const query = useQuery();
+    const search = query.get("search");
+    
+
+useEffect(() => {
+
+setIsLoading(true);
+const searchUrl = search
+? "search/movie?query=" + search
+:"/discover/movie";
+get(searchUrl).then((data) => {
+setMovies(data.results);
+setIsLoading(false);
+
+const upcomingUrl = "/movie/upcoming"
+get(upcomingUrl).then((data) => {
+    setUpcoming(data.results);
+    setIsLoading(false);
+})
+
+});
 
 
-    const fetchMovies = async() =>{
-            
-        try{
-            const response = await axios.get(
-                "https://api.themoviedb.org/3/movie/popular/?api_key=2c3a943259a8a1f468c4905ca720cff4");
 
-        setMovies(response.data.results)
-        } catch (error){
-            console.log({error})
-        }
-    };
-    const arr = [];
-    setMovies(arr)
-        useEffect(()=>{
-        
-        fetchMovies();
-        
-            },[]);
-        
+}, [search]);
+
+
+if (isLoading) {
+    return <Spinner />;
+  }
 
 return(
         <div>  
 
             <ul className={styles.moviesList}>
-               {console.log(arr)} 
-                    {/* <MovieCard key={movie.id} movie={movie}/> */}
+               {movies.map((movie)=>
+                <MovieCard key={movie.id} movie={movie}/>
+               )}
+                    
+                    
+            </ul>
+            <h1>¡Siguientes estrenos!</h1>
+
+            <ul className={styles.moviesList}>
+               {upcoming.map((movie)=>
+                <MovieCard key={movie.id} movie={movie}/>
+               )}
+                    
                     
             </ul>
         </div>

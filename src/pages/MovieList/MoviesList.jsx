@@ -6,22 +6,38 @@ import { get } from "../../utils/httpClient";
 import { Search } from "../../components/Search/Search";
 import { Spinner } from "../../components/Spinner/Spinner";
 import { useQuery } from "../../hooks/useQuery";
+import { Paginacion } from "../../components/Paginacion/Paginacion";
+import ReactPaginate from "react-paginate";
 
 export default function MoviesList() {
     const [movies, setMovies] = useState([]);
+    const [pageCount, setPageCount] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
+    const [currentPage, setcurrentPage] = useState(0);
 
     const query = useQuery();
     const search = query.get("search");
+    
     useEffect(() => {
+
       setIsLoading(true);
+
+      const handlePageChange = (pages) =>{
+        setcurrentPage(pages.page);
+      }
       const searchUrl = search
         ? "/search/movie?query=" + search
-        : "/discover/movie";
+        :"/discover/movie";
       get(searchUrl).then((data) => {
         setMovies(data.results);
         setIsLoading(false);
+        console.log(data.page)
+        setcurrentPage(data.page);
+        
       });
+      
+      
+
     }, [search]);
 
     if (isLoading) {
@@ -53,11 +69,26 @@ return(
                 {movies.map((movie) =>{
                     return(
                             <MovieCard key={movie.id} movie={movie}/>
-
                     );
-                    
                     })}
             </ul>
+            <ReactPaginate
+					  pageCount={pageCount}
+					  pageRange={2}
+					  marginPagesDisplayed={2}
+					  onPageChange={''}
+					  containerClassName={'container'}
+					  previousLinkClassName={'page'}
+					  breakClassName={'page'}
+					  nextLinkClassName={'page'}
+					  pageClassName={'page'}
+					  disabledClassNae={'disabled'}
+					  activeClassName={'active'}
+				    />
+              
+
+            
+            
         </div>
  ); 
 

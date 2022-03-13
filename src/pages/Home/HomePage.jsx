@@ -47,6 +47,7 @@ useEffect(() =>{
     return(
         <div>
             <h1 className="titulo">Bienvenido</h1>
+            <MovieFront/>
             
 
             
