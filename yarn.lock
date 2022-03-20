@@ -4665,9 +4665,9 @@ find-up@^5.0.0:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
 
-firebase@^7.22.1:
+firebase@7.22.1:
   version "7.22.1"
-  resolved "https://registry.npmjs.org/firebase/-/firebase-7.22.1.tgz"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-7.22.1.tgz#e32e00769c9baa21099cc3c47a37ec81375e42be"
   integrity sha512-pMx+Wg6Bl74PNdWxjGLrFxLqtmIB/Ggl8oYQZLl1baa9xPcb9rxut5ZgDcLZlFERBL6vNRhLEszv/+3H827m9A==
   dependencies:
     "@firebase/analytics" "0.5.0"
